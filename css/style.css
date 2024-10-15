@@ -1,0 +1,719 @@
+
+body {
+    background-color: #f5f5f5; 
+    color: #333333; 
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif; 
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav-item-list {
+    background-color: #FFECC8; 
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 5px;
+}
+
+.container-fluid {
+    background-color: #FFF7D1;
+    border: 2px solid black; 
+    border-radius: 7px;
+}
+
+.logo-image {
+    width: 150px; 
+    height: auto; 
+    padding: 10px;
+}
+
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 5px;
+}
+
+
+.nav-link {
+    color: #ffffff; 
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #FF8400; 
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+.pg-footer {
+    background-color: whitesmoke; 
+    color: black; 
+    height: 10vh;
+    border-top: 1px solid #FF8400;
+    padding: 1em;
+    text-align: center;
+}
+
+
+.pg-footer a {
+    color: #FF8400; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pg-footer a:hover {
+    color: #ffffff;
+    background-color: #FF8400;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+
+/* Form Container for better spacing and box look */
+.form-container {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px;
+    margin: 30px auto; /* Center the container */
+    text-align: center;
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+/* Styling the headings */
+.form-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Input fields for form */
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border: 2px solid #FF8400; 
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 50px; /* Set the height */
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #FF8400;
+    box-shadow: 0 0 5px rgba(255, 132, 0, 0.5); 
+    outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #FF8400; 
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: lightslategray;
+    color: #FF8400; 
+}
+.btn-primary.password-update {
+    width: auto;  /* Adjust width for specific button */
+    display: block; /* Ensure it's block to prevent inline issues */
+    margin: 10px auto; /* Center it horizontally */
+}
+h1 {
+    font-family: "Teko", sans-serif;
+    font-size: 2.5em;
+    color: #333333;
+}
+
+
+/* .username, .password{
+ 
+} */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Adjust the height as needed */
+}
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 50px auto; /* Center the box */
+    text-align: center;
+}
+.login-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/* Registration box styling */
+.register-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto; /* Center the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields styling to match */
+.register-box .form-group {
+    margin-bottom: 15px;
+}
+
+.register-box .form-group label {
+    font-weight: bold;
+}
+
+.register-box .btn-primary {
+    background-color: #ff8200;
+    border-color: #ff8200;
+    width: 100%;
+}
+
+.register-box .btn-primary:hover {
+    background-color: #ff9a1a;
+    border-color: #ff9a1a;
+}
+
+/* Account settings box styling */
+.account-settings-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form field styling to match login/register */
+.account-settings-box .form-group {
+    margin-bottom: 15px;
+}
+
+.account-settings-box .btn-primary {
+    background-color: #ff8200;
+    border-color: #ff8200;
+    width: 100%;
+}
+
+.account-settings-box .btn-primary:hover {
+    background-color: #ff9a1a;
+    border-color: #ff9a1a;
+}
+/* Form Container for better spacing and box look */
+/* Container for the entire entries section */
+.entry-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Optional max width to keep things centered */
+    margin: 20px auto; /* Center the container */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the headings */
+.entry-heading h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  
+}
+
+.entry-heading h2 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    
+}
+
+/* Ensure that the entry cards are stacked vertically */
+.entry-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start with a slight downward offset */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Header for each entry card */
+.entry-card-header {
+    font-weight: bold;
+    color: #FF8400;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* Body content of the entry card */
+.entry-card-body {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+}
+
+
+/* Footer of the entry card, where the buttons are */
+.entry-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Buttons within the card */
+.entry-card-footer .btn-warning {
+    background-color: #FFA500;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.entry-card-footer .btn-danger {
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.entry-card-footer .btn:hover {
+    opacity: 0.85;
+}
+.text-success {
+    color: green;
+}
+.text-danger {
+    color: red;
+}
+.entry-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Input fields */
+.form-group {
+    margin-bottom: 15px;
+}
+/* Button hover animation */
+.entry-card-footer .btn-warning,
+.entry-card-footer .btn-danger {
+    transition: all 0.3s ease;
+}
+
+.entry-card-footer .btn-warning:hover {
+    transform: scale(1.05);
+    background-color: #ff9a1a;
+}
+
+.entry-card-footer .btn-danger:hover {
+    transform: scale(1.05);
+    background-color: #FF6347;
+}
+/* Styling for the welcome section on the index page */
+.welcome-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+.display-4 {
+    font-family: "Teko", sans-serif;
+    font-size: 3em;
+    color: #333;
+}
+
+.lead {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.login-box {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #FF8400; 
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #FF5700;
+    color: white;
+    transform: scale(1.05);
+}
+/* Fade-up animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn-danger:hover, .btn-warning:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Optional hover for other buttons */
+.btn-danger:hover {
+    background-color: #FF6347;
+}
+
+.btn-warning:hover {
+    background-color: #FFA500;
+}
+.signup-box {
+    background-color: #fff; /* White background like the login box */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space from the top */
+    width: 350px; /* Same width as the login box */
+    text-align: center;
+}
+
+.signup-box p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.signup-box a {
+    color: #FF8400; /* Same orange color as buttons */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-box a:hover {
+    color: #FF5700;
+    text-decoration: underline;
+}
+/* Input group styling for better alignment */
+.input-group {
+    display: flex;
+    align-items: center;
+    height: 50px; 
+}
+
+.input-group-text {
+    background-color: transparent; /* Make it blend with the background */
+    border: none;
+    padding-left: 8px;
+}
+
+#showLoginPassword {
+    margin-left: 5px; /* Add some spacing between the checkbox and text */
+    margin-top: 2px;
+}
+
+/* Style for login-box */
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 50px auto; /* Center the box */
+    text-align: center;
+}
+
+/* Additional styling for the links below the form */
+.login-box .additional-links {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-box .additional-links a {
+    color: #FF8400;
+    text-decoration: none;
+}
+
+.login-box .additional-links a:hover {
+    text-decoration: underline;
+}
+.btn-show-password {
+    height: 50px; /* Match the button height to the input field */
+    border: 1px solid #FF8400; 
+    border-radius: 4px;
+    background-color: white; 
+    color: #FF8400;
+    padding: 0 15px;
+    margin-left: 5px; /* Adds some space between the input and button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+jounal-container{
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Optional max width to keep things centered */
+    margin: 20px auto; /* Center the container */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* about */
+/* General styling remains the same */
+
+.about-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Section */
+.about-intro h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Features Section */
+.about-features {
+    display: flex;
+    flex-direction: column; /* Stack each feature vertically */
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+/* Alternating feature rows */
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature:nth-child(odd) {
+    flex-direction: row; /* Image on the left */
+}
+
+.feature:nth-child(even) {
+    flex-direction: row-reverse; /* Image on the right */
+}
+
+.feature img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Call to Action Section */
+.about-call-to-action {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.about-call-to-action h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-call-to-action p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-call-to-action .btn {
+    background-color: #ff8400;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-call-to-action .btn:hover {
+    background-color: #ff5700;
+    transform: scale(1.05);
+}
+
+/* Terms of Use Page Styling */
+.terms-of-use-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start with elements hidden */
+    transform: translateY(20px); /* Start with the element slightly below its original position */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.terms-of-use-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.terms-of-use-container h2 {
+    font-size: 1.75rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.terms-of-use-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.terms-of-use-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.terms-of-use-container a:hover {
+    text-decoration: underline;
+}
+.privacy-policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy-intro h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-details h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.privacy-policy-details h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+.privacy-policy-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.privacy-policy-details ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.privacy-policy-details p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-details a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.privacy-policy-details a:hover {
+    text-decoration: underline;
+}
