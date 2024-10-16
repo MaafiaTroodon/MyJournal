@@ -62,10 +62,17 @@ if (isset($_SESSION['username'])) {
             </p>
             <p class="lead">
                 Duis lobortis massa imperdiet quam. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor ac ipsum sed vulputate. Aenean eget justo id urna luctus fringilla sed id mauris. Vivamus vel semper tellus, dictum mollis augue. Ut ac arcu ut tellus pulvinar pretium. Quisque porttitor nunc sed nisi aliquet suscipit. Suspendisse laoreet urna eu metus vestibulum, sit amet dignissim nibh bibendum. In cursus, risus at convallis maximus, enim dui imperdiet felis, sit amet placerat enim dui nec nunc. Aliquam erat volutpat. Curabitur ut ex non purus malesuada convallis. Sed blandit ligula nunc, non sodales felis ultricies ac. Nullam aliquam eu justo sed tristique. Cras sodales rutrum faucibus. Cras tincidunt ornare ante et ultricies. Praesent luctus, nisl at porttitor hendrerit, eros mauris vestibulum dolor, nec maximus leo lorem sit amet mauris.
+
+                Phasellus malesuada libero mi, ut fringilla magna pharetra ut. Curabitur aliquam urna et lacus pellentesque, non ornare ante volutpat. Mauris vel urna quam. Proin felis enim, hendrerit a nunc et, faucibus posuere tellus. Maecenas scelerisque, urna convallis euismod bibendum, ligula leo rhoncus eros, nec accumsan quam diam ut mauris. Etiam vel lectus vel est lacinia feugiat eu ac lorem. Maecenas id scelerisque tellus. In hac habitasse platea dictumst. Praesent tempus pulvinar est sit amet pellentesque.
+            </p>
+            <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla, justo non commodo vulputate, magna sapien venenatis odio, sit amet euismod leo augue ut risus. Sed maximus semper suscipit. Pellentesque tristique urna at nibh suscipit, in finibus turpis maximus. Vivamus dapibus ligula ut libero venenatis egestas. Nullam ac felis non nulla tristique volutpat non id sem. Vivamus rutrum, sapien eget dignissim facilisis, ligula ligula sollicitudin ipsum, et commodo velit purus vitae lacus. Integer ut risus nec est consectetur facilisis vitae nec nunc. Maecenas quis maximus nulla. Suspendisse luctus rutrum tristique.
             </p>
             <div class="login-box">
                 <a href="includes/login.php" class="btn btn-primary btn-lg">Click here to login to access journals</a>
             </div>
+            
             <div class="signup-box">
     <p>Don't have an account? <a href="register.php">Create one today to start writing journals</a></p>
   </div>

@@ -4,7 +4,7 @@ body {
     color: #333333; 
     padding: 0;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif; 
+
 }
 html, body {
     height: 100%;
@@ -46,9 +46,10 @@ html {
 
 .nav-link {
     color: #ffffff; 
-    font-family: "Teko", sans-serif;
-    font-weight: 600;
-    font-size: large;
+    font-family: "Nunito", sans-serif;
+ 
+    font-weight: 900;
+  font-style: normal;
     padding: 5px 15px;
     transition: all 0.3s ease;
 }
@@ -67,6 +68,10 @@ html {
     border-top: 1px solid #FF8400;
     padding: 1em;
     text-align: center;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 
@@ -100,6 +105,10 @@ html {
 .form-container h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 /* Input fields for form */
@@ -148,7 +157,16 @@ html {
     margin: 10px auto; /* Center it horizontally */
 }
 h1 {
-    font-family: "Teko", sans-serif;
+    font-family: "Akaya Kanadaka", system-ui !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    color: #333333;
+}
+.container > h1{
+    font-family: "Akaya Kanadaka", system-ui !important;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5em;
     color: #333333;
 }
@@ -162,6 +180,12 @@ h1 {
     justify-content: center;
     align-items: center;
     min-height: 70vh; /* Adjust the height as needed */
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+    font-style: normal;
+    color: #333333;
 }
 .login-box {
     background-color: #fff;
@@ -172,6 +196,10 @@ h1 {
     width: 350px;
     margin: 50px auto; /* Center the box */
     text-align: center;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .login-box h1 {
     font-size: 24px;
@@ -273,8 +301,17 @@ h1 {
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start with a slight downward offset */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
-
+.entry-heading > h2{
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 /* Header for each entry card */
 .entry-card-header {
     font-weight: bold;
@@ -716,4 +753,16 @@ jounal-container{
 
 .privacy-policy-details a:hover {
     text-decoration: underline;
+}
+.lead{
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+p , li{
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }

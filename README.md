@@ -63,9 +63,8 @@ Content Used: The content for the “About Page,” “Terms of Use,” and “P
 Date Accessed: October 15, 2024
  I used ChatGPT to draft the informational text on the about page, including sections on MyJournal’s mission, privacy, and user engagement. Additionally, I used ChatGPT to create a comprehensive “Terms of Use” and “Privacy Policy” to align with standard web content practices.
 
+13)Google Fonts. Font Selection Embed [Website]. Available at: https://fonts.google.com/selection/embed. Accessed: October 15, 2024.
+Note: I used the Akaya Kanadaka font from Google Fonts and embedded it in the website for applying specific styles to h1 headings.
 
-
-
-
-
-# MyJournal
+14)Google Fonts. Font Selection Embed. Available at: https://fonts.google.com/selection/embed. Accessed: October 15, 2024.
+Note: Used the embedded font selection feature to implement the “Akaya Kanadaka” font for specific heading styles in the project.
