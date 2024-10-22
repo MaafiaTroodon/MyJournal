@@ -10,7 +10,11 @@ require 'includes/header.php';
     </section>
 
     <section class="about-features">
-        <!-- First feature with image on the left -->
+        <!-- 
+        Freepik. (2024). Flat Our Mission Infographics with Details. 
+        Retrieved October 15, 2024, from https://www.freepik.com/free-vector/flat-our-mission-infographics-with-details_18775937.htm. 
+        Image used for "Our Mission" section.
+        -->
         <div class="feature">
             <img src="images/our-mission.jpg" alt="Our Mission">
             <div class="text-fade-in">
@@ -19,7 +23,11 @@ require 'includes/header.php';
             </div>
         </div>
 
-        <!-- Second feature with image on the right -->
+        <!-- 
+        Unsplash. (2024). Two Women Facing Security Camera Above Mounted on Structure. 
+        Retrieved October 15, 2024, from https://unsplash.com/photos/two-women-facing-security-camera-above-mounted-on-structure-fPxOowbR6ls.
+        Image used for the “Privacy & Security” section.
+        -->
         <div class="feature">
             <img src="images/privacy-and-security.avif" alt="Privacy & Security">
             <div class="text-fade-in">
@@ -28,7 +36,11 @@ require 'includes/header.php';
             </div>
         </div>
 
-        <!-- Third feature with image on the left -->
+        <!-- 
+        Brave Search. (2024). Connection Through the World Earth Globe.
+        Retrieved October 15, 2024, from https://search.brave.com/images?q=connection+throught+the+world+earth+globe&source=web.
+        Image used for the “Connect & Share” section.
+        -->
         <div class="feature">
             <img src="images/connect-share.webp" alt="Connect & Share">
             <div class="text-fade-in">
@@ -37,7 +49,11 @@ require 'includes/header.php';
             </div>
         </div>
 
-        <!-- Fourth feature with image on the left -->
+        <!-- 
+        Unsplash. (2024). Egg Balancing on the Edge of a Table About to Fall Down and Break.
+        Retrieved October 15, 2024, from https://unsplash.com/photos/egg-balancing-on-the-edge-of-a-table-about-to-fall-down-and-break-due-to-domino-tiles-falling-fe0tQrcFTI8.
+        Image used for the “Impact on Life” section.
+        -->
         <div class="feature">
             <img src="images/impact-life.avif" alt="Impact on Life">
             <div class="text-fade-in">
@@ -46,7 +62,11 @@ require 'includes/header.php';
             </div>
         </div>
 
-        <!-- Fifth feature with image on the right -->
+        <!-- 
+        Unsplash. (2024). Plant Growing Process Cycle.
+        Retrieved October 15, 2024, from https://unsplash.com/photos/plant-growing-process-cycle-sunflower-seeds-and-sunflowers-sprouts-in-different-stages-of-growing-on-white-wooden-background-top-view-sunflower-VZ0f6uWbMUI.
+        Image used for the "Growth and Development" section.
+        -->
         <div class="feature">
             <img src="images/growth.avif" alt="Personal Growth">
             <div class="text-fade-in">

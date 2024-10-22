@@ -1,36 +1,31 @@
 <?php
 session_start();
+ob_start();  // Start output buffering
 require 'includes/header.php';
 
-// Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
 }
 
-// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = htmlspecialchars($_POST['title']);
     $body = htmlspecialchars($_POST['body']);
     $username = $_SESSION['username'];
     $date = date('Y-m-d'); // Get the current date
 
-    // Validate that the title and body are not empty
     if (empty($title) || empty($body)) {
         $error_message = "Both title and body are required.";
     } else {
-        // Path to entries.csv file
         $file_path = $_SERVER['DOCUMENT_ROOT'] . '/CSCI2170/a2/db/entries.csv';
 
-        // Open the CSV file for appending new entries
         if (($file = fopen($file_path, 'a')) !== false) {
-            // Save the entry in the format: Username,Title,Body,Date
             fputcsv($file, [$username, $title, $body, $date]);
             fclose($file);
 
-            // Redirect to the home page after adding entry
+            // Redirect to the home page after adding the entry
             header("Location: index.php");
-            exit();
+            exit();  // Always use exit after header redirect
         } else {
             $error_message = "Could not write to the entries database.";
         }

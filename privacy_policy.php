@@ -2,7 +2,8 @@
 session_start();
 require 'includes/header.php';
 ?>
-
+<!-- ChatGPT, OpenAI. (2024). Generated privacy policy content for MyJournal. Date Accessed: October 15, 2024.
+ Used for creating the detailed sections on "Information We Collect," "Data Security," and other privacy aspects. -->
 <div class="privacy-policy-container">
     <section class="privacy-policy-intro">
         <h1>Privacy Policy</h1>

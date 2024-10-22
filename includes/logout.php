@@ -3,7 +3,7 @@
  * Code from PHP Manual (php.net), 
  * Example #1 Destroying a session with $_SESSION, 
  * Used from https://www.php.net/manual/en/function.session-destroy.php
- * Date accessed: 19 Sept 2024
+ * Date accessed: 10 Oct 2024
  */
 session_start();
 
@@ -23,8 +23,13 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-// Finally, destroy the session
+
 session_destroy();
+// 
+// PHP Manual. (2023). header() - Manual. 
+// Retrieved October 15, 2024, from https://www.php.net/manual/en/function.header.php.
+// Used for redirecting users to the index page after logging out.
+// 
 
 // Redirect to the login page after logging out
 header("Location: ../index.php");

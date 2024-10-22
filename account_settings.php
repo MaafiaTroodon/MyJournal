@@ -1,8 +1,12 @@
 <?php
 session_start();
+ob_start(); // Start output buffering
 require 'includes/header.php';
 
-// Ensure the user is logged in
+/*
+PHP Manual. (2023). password_hash() - Manual. PHP Documentation. Retrieved October 10, 2024, from https://www.php.net/manual/en/function.password-hash.php.
+Used to securely hash passwords before saving them in the users.csv file.
+*/
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
@@ -91,22 +95,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_password'])) {
 }
 ?>
 
-<div class="form-container">
+<div class="form-container mt-5">
     <h1>Account Settings</h1>
 
     <!-- Display success or error messages -->
     <?php if (isset($error_message)): ?>
-        <p class="text-danger"><?= $error_message; ?></p>
+        <div class="alert alert-danger"><?= $error_message; ?></div>
     <?php elseif (isset($_GET['success']) && $_GET['success'] == 'name'): ?>
-        <p class="text-success">Display name updated successfully!</p>
+        <div class="alert alert-success">Display name updated successfully!</div>
     <?php elseif (isset($_GET['success']) && $_GET['success'] == 'password'): ?>
-        <p class="text-success">Password changed successfully! Please log in again.</p>
+        <div class="alert alert-success">Password changed successfully! Please log in again.</div>
     <?php endif; ?>
 
     <!-- Form for updating display name -->
     <form method="POST" action="account_settings.php">
-        <div class="form-group">
-            <label for="full_name">Display Name:</label>
+        <div class="mb-3">
+            <label for="full_name" class="form-label">Display Name:</label>
             <input type="text" class="form-control" id="full_name" name="full_name" value="<?= htmlspecialchars($current_full_name); ?>" required>
         </div>
         <button type="submit" name="update_name" class="btn btn-primary">Update Display Name</button>
@@ -116,34 +120,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_password'])) {
 
     <!-- Form for updating password -->
     <form method="POST" action="account_settings.php">
-        <div class="form-group">
-            <label for="current_password">Current Password:</label>
+        <div class="mb-3">
+            <label for="current_password" class="form-label">Current Password:</label>
             <div class="input-group">
                 <input type="password" class="form-control" id="current_password" name="current_password" required>
-                <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('current_password')">Show</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('current_password')">Show</button>
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="new_password">New Password:</label>
+        <div class="mb-3">
+            <label for="new_password" class="form-label">New Password:</label>
             <div class="input-group">
                 <input type="password" class="form-control" id="new_password" name="new_password" required>
-                <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('new_password')">Show</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('new_password')">Show</button>
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="confirm_password">Confirm New Password:</label>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">Confirm New Password:</label>
             <div class="input-group">
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-                <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('confirm_password')">Show</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('confirm_password')">Show</button>
             </div>
         </div>
 
-        <!-- Add the missing submit button for the password update -->
         <button type="submit" name="update_password" class="btn btn-primary">Update Password</button>
     </form>
 </div>
+
 <script>
 function togglePasswordVisibility(fieldId) {
     var passwordField = document.getElementById(fieldId);
@@ -158,7 +162,6 @@ function togglePasswordVisibility(fieldId) {
     }
 }
 </script>
-
 
 <?php
 require 'includes/footer.php';

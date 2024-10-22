@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-// Ensure the user is logged in
+/*
+PHP Manual. (2023). fgetcsv() - Manual. PHP Documentation. Retrieved October 10, 2024, from https://www.php.net/manual/en/function.fgetcsv.php.
+Used to read journal entries from the CSV file and delete specific entries.
+*/
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();

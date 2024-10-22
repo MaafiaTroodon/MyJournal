@@ -2,7 +2,10 @@
 session_start();
 require 'includes/header.php';
 ?>
-
+    <!-- 
+    ChatGPT, OpenAI (2024). Generated the content for this Terms of Use page. 
+    Date Accessed: October 15, 2024. Content outlines the user agreement for the MyJournal platform.
+    -->
 <div class="terms-of-use-container">
     <h1>Terms of Use</h1>
     <p>Welcome to MyJournal. These terms and conditions outline the rules and regulations for the use of MyJournal's website.</p>

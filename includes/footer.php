@@ -25,11 +25,20 @@
         <a href="/CSCI2170/A2/privacy_policy.php">Privacy Policy</a>
     </p>
     <br>
+    <!-- 
+    Google Fonts. (2023). Teko Font. 
+    Retrieved September 17, 2024, from https://fonts.google.com/specimen/Teko. 
+    Teko font is used for styling the footer text.
+    -->
 </footer>
 <!-- Bootstrap JS for navbar functionality -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<!-- Link to your custom JavaScript file -->
+<!-- 
+Bootstrap. (2023). Bootstrap JS CDN. 
+Retrieved October 10, 2024, from https://getbootstrap.com/docs/5.0/getting-started/introduction/.
+Used for navbar and responsive design.
+-->
 <script src="js/main.js"></script>
 </body>
 </html>

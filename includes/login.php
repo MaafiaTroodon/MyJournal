@@ -1,25 +1,40 @@
 <?php
 session_start();
-include
-// Define the base URL for easier path management
-$base_url = '/CSCI2170/a2/';  // Adjust to match your actual folder structure
+// 
+// PHP Manual. (2023). session_start() - Manual. 
+// Retrieved October 15, 2024, from https://www.php.net/manual/en/function.session-start.php.
+// Used to initialize sessions for user login.
+// 
 
-// Enable error reporting for debugging (you can remove this in production)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+include
+
+$base_url = '/CSCI2170/a2/'; 
+
 
 $csv_path = $_SERVER['DOCUMENT_ROOT'] . $base_url . 'db/users.csv';
 
-// Ensure the file exists before proceeding
+// 
+// PHP Manual. (2023). fopen() - Manual. 
+// Retrieved October 15, 2024, from https://www.php.net/manual/en/function.fopen.php.
+// Used for opening and reading the CSV file containing user credentials.
+// 
 if (!file_exists($csv_path)) {
     die("Error: The user database file was not found.");
 }
 
-// Handle form submissions based on the action
+// 
+// PHP Manual. (2023). password_verify() - Manual. 
+// Retrieved October 10, 2024, from https://www.php.net/manual/en/function.password-verify.php.
+// Used to verify passwords securely in login logic.
+// 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
     $username = htmlspecialchars($_POST['username'] ?? '');
+    // 
+    // PHP Manual. (2023). password_verify() - Manual. 
+    // Retrieved October 15, 2024, from https://www.php.net/manual/en/function.password-verify.php.
+    // Used for verifying hashed passwords during login.
+    // 
 
     if ($action === 'login') {
         $password = $_POST['password'] ?? '';
@@ -40,6 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 if ($valid_user) {
                     session_regenerate_id(true);
+                     // 
+                    // PHP Manual. (2023). header() - Manual. 
+                    // Retrieved October 15, 2024, from https://www.php.net/manual/en/function.header.php.
+                    // Used to redirect users after successful login.
+                    // 
                     header("Location: ../index.php");
                     exit();
                 } else {

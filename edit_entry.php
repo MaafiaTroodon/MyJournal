@@ -2,7 +2,10 @@
 session_start();
 require 'includes/header.php';
 
-// Ensure the user is logged in
+/*
+PHP Manual. (2023). fputcsv() - Manual. PHP Documentation. Retrieved October 10, 2024, from https://www.php.net/manual/en/function.fputcsv.php.
+Used to write updated journal entries back to the CSV file.
+*/
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();

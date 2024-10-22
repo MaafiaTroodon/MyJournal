@@ -1,8 +1,17 @@
 <?php
 session_start();
-require 'includes/header.php'; // Include your header here
+/*
+PHP Manual. (2023). ob_start() - Manual. Retrieved October 17, 2024, from https://www.php.net/manual/en/function.ob-start.php.
+Used to initiate output buffering to prevent header errors and ensure redirection works correctly.
+*/
+ob_start(); // Start output buffering
+require 'includes/header.php';
 
-// Define the base URL for easier path management
+/*
+PHP Manual. (2023). password_verify() - Manual. PHP Documentation. Retrieved October 10, 2024, from https://www.php.net/manual/en/function.password-verify.php.
+Used to verify the hashed passwords during the password reset process.
+*/
+
 $base_url = '/CSCI2170/a2/';
 $csv_path = $_SERVER['DOCUMENT_ROOT'] . $base_url . 'db/users.csv';
 
@@ -20,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             while (($data = fgetcsv($file)) !== false) {
                 if ($data[0] === $username) {
                     $_SESSION['reset_username'] = $username;
-                    $_SESSION['security_answer'] = $data[4]; // Adjust to the correct index // Assuming security answer is in column 3
+                    $_SESSION['security_question'] = $data[3]; // Store security question
+                    $_SESSION['security_answer'] = $data[4];   // Store security answer
                     $user_found = true;
                     break;
                 }
@@ -54,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (($file = fopen($csv_path, 'r')) !== false) {
                 while (($data = fgetcsv($file)) !== false) {
                     if ($data[0] === $_SESSION['reset_username']) {
-                        $data[1] = $hashed_password; // Update the password field (assuming it's in column 1)
+                        $data[1] = $hashed_password; // Update the password field 
                     }
                     $users[] = $data;
                 }
@@ -105,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Step 2: Ask Security Question -->
             <form action="forgot_password.php" method="POST">
                 <div class="form-group">
-                    <label for="security_answer">What is your favorite color?</label> <!-- Replace this with your actual security question -->
+                    <label for="security_answer"><?= htmlspecialchars($_SESSION['security_question']); ?></label> <!-- Display user-specific security question -->
                     <input type="text" class="form-control" id="security_answer" name="security_answer" required>
                 </div>
                 <input type="hidden" name="step" value="2">
@@ -137,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 
-<!-- Add your Bootstrap JS if needed -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 function togglePasswordVisibility(fieldId) {
@@ -155,5 +165,5 @@ function togglePasswordVisibility(fieldId) {
 </script>
 
 <?php
-require 'includes/footer.php'; // Include your footer here
+require 'includes/footer.php';
 ?>

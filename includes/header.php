@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- 
+    Google Fonts. (2023). Akaya Kanadaka Font. Retrieved October 10, 2024, from https://fonts.google.com/specimen/Akaya+Kanadaka.
+    Font family used for styling text in the application.
+    -->
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +28,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Nunito:ital,wght@0,700;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 
+    Google Fonts. (2023). Nunito Font. Retrieved October 10, 2024, from https://fonts.google.com/specimen/Nunito.
+    Nunito font is used for enhanced readability.
+    -->
     <title>myJournal</title>
 
     <script>

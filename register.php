@@ -1,6 +1,11 @@
 <?php
+ob_start(); // Start output buffering
 require 'includes/header.php';
 
+/*
+PHP Manual. (2023). password_hash() - Manual. PHP Documentation. Retrieved October 10, 2024, from https://www.php.net/manual/en/function.password-hash.php.
+Used to securely hash passwords before saving them in the users.csv file during registration.
+*/
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve form input and sanitize it
     $username = htmlspecialchars($_POST['username']);
@@ -15,8 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<p class='text-danger'>Passwords do not match!</p>";
     } else {
         // Path to the users.csv file
-        
-$csv_path = '/Applications/XAMPP/xamppfiles/htdocs/CSCI2170/a2/db/users.csv';
+        $csv_path = '/Applications/XAMPP/xamppfiles/htdocs/CSCI2170/a2/db/users.csv';
 
         // Ensure the users.csv file exists, and create it if not
         if (!file_exists($csv_path)) {
@@ -62,48 +66,47 @@ $csv_path = '/Applications/XAMPP/xamppfiles/htdocs/CSCI2170/a2/db/users.csv';
   <div class="register-box">
     <h1>Register for myJournal</h1>
     <form action="register.php" method="POST">
-      <div class="form-group">
-        <label for="username">Username:</label>
+      <div class="form-group mb-3">
+        <label for="username" class="form-label">Username:</label>
         <input type="text" class="form-control" id="username" name="username" required>
       </div>
 
-      <div class="form-group">
-  <label for="password">Password:</label>
-  <div class="input-group">
-    <input type="password" class="form-control" id="register_password" name="password" required>
-    <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('register_password')">Show</button>
-  </div>
-</div>
+      <div class="form-group mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <div class="input-group">
+          <input type="password" class="form-control" id="register_password" name="password" required>
+          <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('register_password')">Show</button>
+        </div>
+      </div>
 
-<div class="form-group">
-  <label for="confirm_password">Confirm Password:</label>
-  <div class="input-group">
-    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-    <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('confirm_password')">Show</button>
-  </div>
-</div>
+      <div class="form-group mb-3">
+        <label for="confirm_password" class="form-label">Confirm Password:</label>
+        <div class="input-group">
+          <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+          <button class="btn-show-password" type="button" onclick="togglePasswordVisibility('confirm_password')">Show</button>
+        </div>
+      </div>
 
-      <div class="form-group">
-        <label for="full_name">Full Name:</label>
+      <div class="form-group mb-3">
+        <label for="full_name" class="form-label">Full Name:</label>
         <input type="text" class="form-control" id="full_name" name="full_name" required>
       </div>
 
-      <div class="form-group">
-        <label for="security_question">Security Question:</label>
+      <div class="form-group mb-3">
+        <label for="security_question" class="form-label">Security Question:</label>
         <input type="text" class="form-control" id="security_question" name="security_question" required>
       </div>
 
-      <div class="form-group">
-        <label for="security_answer">Security Question Answer:</label>
+      <div class="form-group mb-3">
+        <label for="security_answer" class="form-label">Security Question Answer:</label>
         <input type="text" class="form-control" id="security_answer" name="security_answer" required>
       </div>
 
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-primary w-100">Register</button>
     </form>
   </div>
 </main>
 
-<!-- Add this JavaScript to toggle password visibility -->
 <script>
 function togglePasswordVisibility(fieldId) {
   var passwordField = document.getElementById(fieldId);
@@ -117,4 +120,5 @@ function togglePasswordVisibility(fieldId) {
 
 <?php
 require 'includes/footer.php';
+ob_end_flush(); // End output buffering
 ?>
